@@ -1,0 +1,53 @@
+<html>
+<head>
+	<style type="text/css">
+
+		body {
+		  background-color: lightblue;
+		}
+
+		h1 {
+			font-size: 48px;
+		}
+
+		.button {
+		  background-color: #4CAF50; /* Green */
+		  border: none;
+		  color: white;
+		  padding: 15px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+		  border-radius: 8px;
+		  background-color: white;
+  			color: black;
+  			border: 2px solid #B50; /* Green */
+  			transition-duration: 0.4s;
+		}
+		.button:hover {
+		  background-color: #4CA; /* Green */
+		  color: white;
+		}
+
+	</style>
+    <script language="JavaScript">
+        function myFunction(param) {
+        	if (window.ReactNativeWebView) {
+        	window.ReactNativeWebView.postMessage(param + " clicked from html -- Gr8");
+            // var postMessage = window.ReactNativeWebView;
+            // postMessage(param + " clicked from html");
+}
+            
+        }
+    </script>
+
+</head>
+<body>
+
+<h1>This is sample HTML page..Below 2 buttons does click....</h1><br />
+
+<button id="button1" class="button" onclick="myFunction(1)">Button 1</button><br /><br />
+<button id="button2" class="button" onclick="myFunction(2)">Button 2</button>
+</body>
+</html>
